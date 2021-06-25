@@ -1,0 +1,172 @@
+{% extends 'header.html' %}
+{% load static %}
+<body>
+{% block content %}
+
+     <div class="card-text-center">
+         <img class="card-img-top" src="{% static 'image/images - 2021-04-08T121758.483.jpeg' %}" height="500px" width="100%">
+          <center><h3 style="margin-top:-330px; color:white" class="container-fluid"><strong>Courses</strong>
+              <br>Enroll for professional courses.<br>
+            <a href="{% url 'wholphin:register' %}"
+               target="_blank" class="btn btn-primary" >Apply Now!</a></h3>
+              </center>
+    </div>
+<div style="font-family:san-serif;margin-top:30px" class="container-fluid px-4">
+
+
+      <!--- SECTION ONE COURSES--->
+
+     <div class="row text-left" style="background-color:white;margin-top:250px; display:flex;justify-content:space-around" id="pro">
+
+   {% for course in course1 %}
+    <div class="col-lg-3 col-md-6 mb-6">
+      <div  class="card text-left"   style="border:01px solid white; display:flex;justify-content:space-around">
+    <img class="card-img-top" src=" {{course.image.url}}" height="250rem" width="100px">
+          <div class="card-footer">
+          <div style="background-color:"><h5 style="color:#add"><a href="{{course.get_absolute_url}}" style="padding-left:01px">
+        {{course.course_title.capitalize}}</a></h5></div>
+          <div class="card-text" style="font-size:20px;justify-content:space-around; display:lex-around;padding:10px ">
+              {% if course.description|wordcount <= 15 %}
+           {{course.description|truncatewords:10}}
+          {% else %}
+    {{course.description|truncatewords:10}}
+              <div>
+              <a href="{{course.get_absolute_url}}" style="width:120px;border:none;"> Apply Now</a>
+                  </div>
+          {% endif %}
+          </div>
+          </div>
+          <br>
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+
+    <!--- SECTION TWO COURSES--->
+ <div class="row text-left" style="background-color:white;margin-top:20px; display:flex;justify-content:space-around" id="pro">
+  {% for course in course2 %}
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div  class="card text-left"   style="border:01px solid white; display:flex;justify-content:space-around">
+    <img class="card-img-top" src=" {{course.image.url}}" height="250rem" width="100px">
+          <div class="card-footer">
+          <div style="background-color:"><h5 style="color:#add"><a href="{{course.get_absolute_url}}" style="font-family:san serif; padding-left:-5px">
+        {{course.course_title.capitalize}}</a></h5></div>
+          <div class="card-text" style="font-size:20px;justify-content:space-around; display:lex-around;padding:10px ">
+              {% if course.description|wordcount <= 15 %}
+           {{course.description|truncatewords:10}}
+          {% else %}
+    {{course.description|truncatewords:10}}
+              <div>
+              <a href="{{course.get_absolute_url}}" style="width:120px;border:none;"> Apply Now</a>
+                  </div>
+          {% endif %}
+          </div>
+          </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+
+</div>
+
+
+    <!--- SECTION THREE COURSES--->
+
+
+
+
+
+
+<!section four courses--->
+
+     <header class="jumbotron" style="display:flex;justify-content:space-around;height:450px">
+        <h4 class="container-fluid" style="margin-top:8%">MISCELLENEOUS COURSES<br>Latest update on miscelleneous courses.<br><br>
+            <a href="Tel: +2349048178433" class="btn btn-primary">Call for action!</a></h4>
+
+        <div class="img-responsive"  style="background-image:url({% static 'image/images.jpeg' %});
+        background-repeat:no-repeat;width:100%; height:auto">
+
+      </div>
+    </header>
+
+<div class="container-fluid px-6">
+      <div class="row text-left" style="background-color:white;margin-top:20px; display:flex;justify-content:space-around">
+ {% for course in course4 %}
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div  class="card text-left"   style="border:01px solid white; display:flex;justify-content:space-around">
+    <img class="card-img-top" src=" {{course.image.url}}" height="250rem" width="100px">
+          <div class="card-footer">
+          <div style="background-color:"><h5 style="font-size:30px;color:#add"><a href="{{course.get_absolute_url}}" style="font-family:san serif; padding-left:px">
+        {{course.course_title.capitalize}}</a></h5></div>
+          <div class="card-text" style="font-size:20px;justify-content:space-around; display:lex-around;padding:px ">
+              {% if course.description|wordcount <= 15 %}
+           {{course.description|truncatewords:10}}
+          {% else %}
+    {{course.description|truncatewords:10}}
+              <div>
+              <a href="{{course.get_absolute_url}}" style="width:120px;border:none;"> Apply Now</a>
+                  </div>
+          {% endif %}
+          </div>
+          </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- SECTION FOUR COURSES
+
+    ----SECTION Five COURSES-----
+
+   <div class="row text-left" style=" background-color:white; display:flex;justify-content:space-around">
+
+    {% for course in course5 %}
+    <div class="col-lg-3 col-md-6 mb-4" >
+      <div  class="card text-center"   style="border:1px solid white; display:flex;justify-content:space-around">
+        <div style="background-color:"><h6 style="color:#add"><a href="{{course.get_absolute_url}}" style="padding-left:20px">
+        {{course.course_title.capitalize}}</a></h6></div>
+    <img class="card-img-top" src=" {{course.image.url}}" height="130rem" width="100px">
+          <div class="card-text" style="justify-content:space-around; display:lex-around;padding:10px ">
+              {% if course.description|wordcount <= 15 %}
+           {{course.description}}
+          {% else %}
+    {{course.description|truncatewords:10}}
+              <button class="btn btn-success"><a href="{{course.get_absolute_url}}" style="color:white"> Apply Now</a></button>
+          {% endif %}
+          </div>
+
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+--->
+
+
+</div>
+{% endblock %}
+</body>

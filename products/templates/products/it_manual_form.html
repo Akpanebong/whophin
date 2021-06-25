@@ -1,0 +1,23 @@
+{% extends 'printingheader.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+th{border:10px solid black}
+    </style>
+</head>
+<body>
+{% block content %}
+{% for message in messages %}
+<center class="alert alert-primary">
+{{message}}
+    </center>
+{% endfor %}
+<iframe src="{% static '_it/IT Form.pdf' %}" style="margin-top:-20px;width:100%;height:100vh"></iframe>
+<!--<embed src="{% static '_it/IT Form.pdf' %}" style="width:100vw;height:100vh">-->
+{% endblock %}
+</body>
+</html>

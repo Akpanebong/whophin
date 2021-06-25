@@ -1,0 +1,66 @@
+{% extends 'header.html' %}
+{% load static %}
+<head>
+    <title>Courses' Detail</title>
+    <link rel="stylesheet" href="{% static 'path/to/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+{% block content %}
+
+
+    <header class="jumbotron my-4" style="display:flex;justify-content:space-around;height:450px">
+    <h4 class="container-fluid" style="margin-top:50px"><b >{{price.course_title|upper|linebreaks}}</b>
+        <p style="font-family:Brush Script MT">{{price.description|truncatewords:10}}</p>
+        <br><a href="{% url 'wholphin:register' %}" class="btn btn-primary">Apply Now!</a></h4>
+
+        <div class="card-text-center" >
+
+             <img class="card-img-top" src=" {{price.image1.url}}" height="100%" width="100rem">
+
+      </div>
+         </header>
+<div style="font-family:sans-serif;margin-top:30px" class="container py-6">
+  <div class="row text-left" id="top">
+
+      <div class="jumbotron" style="border:none;background:none;font-size:20px;font-family:san serif;">{{price.description}}</div>
+    </div>
+
+     <div class="row text-left" style="margin-top:px; background-color:white; display:flex;justify-content:space-around" id="pro">
+
+    {% for price in price.coursesdetail_set.all %}
+    <div class="col-lg-4 col-md-6 mb-4" >
+      <div  class="card text-left"   style="width:100%;border:01px solid white; display:flex;justify-content:space-around">
+   <img class="card-img-top" src=" {{price.image1.url}}" height="250px" width="50%">
+          <div class="card-footer">
+          <div id="wholphinplus" style="background-color:"><h6 style="color:#add"><a href="#wholphinplus" style="padding-left:1px;font-size:20px" class="">
+        {{price.course_subtitle}}</a></h6></div>
+          <div class="card-text" style="justify-content:space-around; display:lex-around;padding:1px " >
+             {% if price.description|wordcount <= 15 %}
+           {{price.description}}
+          {% else %}
+    {{price.description|truncatewords:36}}
+
+          {% endif %}
+          </div>
+          </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+
+
+
+
+         <div class="">
+<div class="card-footer">
+   <h4>Duration: {{price.duration}} months<br>
+       Amount: <strike>N</strike>{{price.amount}}</h4>
+    </div>
+</div>
+    <a href="{% url 'wholphin:register' %}"><button class="alert alert-primary">Apply Now</button></a>
+</div>
+
+{% endblock %}

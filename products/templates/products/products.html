@@ -1,0 +1,69 @@
+{% extends 'header.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Wholphinplus</title>
+<link rel="stylesheet" href="{% static 'path/to/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+{% block content %}
+<div class="quote" style="font-family:sans-serif">
+
+     <div class="card-text-center">
+         <img class="card-img-top" src="{% static 'image/pro.jpeg' %}" height="500px" width="100%">
+          <center><h3 style="margin-top:-330px; color:white" class="container-fluid"><strong>Our Products</strong>
+              <br><p style="font-family:san-serif;margin-top:30px;font-size:18px;color:#fff" ><strong>Wholphinplus provides a complete and comprehensive solutions for your unique business need.
+        Our IT products are tailored to help you increase productivity and efficiency, providing cutting-edge solutions that
+                  scales as your company grows.</strong></p><br>
+            <a href="Tel: +2349048178433" class="btn btn-primary" >Call for action!</a></h3>
+              </center>
+    </div>
+
+
+
+</div>
+<div class="container py-6">
+  <div class="row text-left" style="margin-top:160px; background-color:white; display:flex;justify-content:space-around" id="pro">
+
+   {% for product in products %}
+    <div class="col-lg-4 col-md-6 mb-4" >
+      <div  class="card text-left"   style="border:01px solid white; display:flex;justify-content:space-around">
+    <img class="card-img-top" src="{{product.pics.url}}" height="250rem" width="100px">
+          <div class="card-footer">
+          <div style="background-color:"><h5 style="color:#add"><a href="{{product.get_absolute_url}}" style="padding-left:0px">
+   {{product.service_rendered|capfirst}}</a></h5></div>
+          <div class="card-text" style="justify-content:space-around;font-size:20px;font-family:san serif; display:lex-around;padding-left:02px ">
+              {% if product.description|wordcount < 4 %}
+            {{product.description|truncatewords:20}}
+          {% else %}
+    {{product.description|truncatewords:10}}
+
+
+              <div > <a href="{{product.get_absolute_url}}"> Read More!</a></div>
+
+          {% endif %}
+          </div>
+          </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}
+</body>
+</html>
+

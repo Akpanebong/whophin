@@ -1,0 +1,105 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wholphinplus Venture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  	<link rel="icon" type="image/png" href="image/images (5).png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'home/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'home/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+  </head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-light ftco_navbar bg-dark ftco-navbar-dark" id="ftco-navbar">
+	    <div class="container" >
+
+             <a class="navbar-small" href="/" style="font-size:15px;font-family:Matura MT Script Capitals;color:white">
+                 <img  src="{% static 'image/logo_plus.png' %}" height="15px" width="15px"> Wholphinplus </a>
+
+	      <button style="color:#fff;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                  aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	     <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto" style="font-size:20px;">
+	          <li class="nav-item active"> <a class="nav-link active" style="font-size:15px;color:white" aria-current="page" href="/">Home</a></li>
+
+                 <li class="nav-item active">
+                 <a class="nav-link active" style="font-size:15px;color:white" aria-current="page" href="{% url 'wholphin:course' %}">Courses</a></li>
+
+                <li class="nav-item active"> <a class="nav-link active" style="font-size:15px;color:white" aria-current="page" href="{% url 'wholphin:services' %}">Services</a></li>
+
+                 <li class="nav-item active"> <a class="nav-link active" style="font-size:15px;color:white" href="{% url 'wholphin:contact' %}">Contact</a></li>
+
+                 <li class="nav-item active"><a class="nav-link active" style="font-size:15px;color:white" href="{% url 'wholphin:about' %}">About Us</a></li>
+
+	          <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle"  href="{% static 'static/#" id="dropdown04" data-toggle="dropdown" style="font-size:15px;color:white" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="{% url 'wholphinplus:products' %}">Products</a>
+<a class="dropdown-item" href="{% url 'wholphinplus:application' %}">Career</a>
+                  <a class="dropdown-item" href="{% url 'wholphin:register' %}"
+               target="_blank" >Apply Now!</a>
+                <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'wholphin:t&c' %}">Our Terms</a>
+                  <a class="dropdown-item" href="">Gallery</a>
+              </div>
+            </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+<!END OF NAVBAR-->
+{% block content %}{% endblock %}
+{% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+ <script src="{% static 'home/js/jquery.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'home/js/popper.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'home/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'home/js/aos.js' %}"></script>
+  <script src="{% static 'home/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'home/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'home/js/google-map.js' %}"></script>
+  <script src="{% static 'home/js/main.js' %}"></script>
+</body>
+</html>
+
+
+

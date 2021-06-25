@@ -1,0 +1,114 @@
+{% extends 'header.html' %}
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>wholphinplus</title>
+      <link rel="stylesheet" href="{% static 'path/to/font-awesome/css/font-awesome.min.css' %}">
+
+  </head>
+  <body>
+{% block content %}
+
+   <header class="jumbotron" style="display:flex;justify-content:space-around;height:450px">
+        <div style="margin-top:90px;" class="container-fluid"><h4>Welcome to <br>Wholphinplus!</h4><p>
+            <h6>A computer software company</h6><br><br></div>
+        <div class="card-text-center" style="background-image:url({% static 'image/images - 2021-03-23T000333.925.jpeg' %});
+        background-repeat:no-repeat;width:100rem; height:100%">
+
+      </div>
+    </header>
+
+    <div id="rp" class="container" >
+       <div class="row">
+
+
+<div class="container" style="font-family:Broadway">
+<!--ABOUT US SECTION-->
+       <div class="row mb-5">
+              <div class="col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3" style="margin-top:30px;">
+ <center><strong style="font-size:20px;">About Us</strong></center>
+ <h6 style="padding-left:30px;padding-top:-40px;font-size:17px;font-family:san serif">
+                Whophinplus is a computer software company that deals with Artificial Intelligent, Data Science, Machine Learning,
+         Deep Learning, Web Development and Software Development. <P></P>
+  Professional attributes in  Wholpinplus include collaborative leadership, skilled operational management and implementation
+                  of problem solution. <P></P>  Wholphinplus emerge as the top software company in Akwa Ibom State because of its
+          popularity in Artificial Intelligence, Machine Learning and Deep Learning.
+       Wholphinplus also has a coding school were people are trained to become professional and certified developers.</h6>
+	            </div>
+            </div>
+          </div>
+              <div class="col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3">
+<img class="col-md-12 col-lg-12" width="500" height="390" style="margin-top:10px" src="{% static 'image/images - 2021-03-29T130455.858.jpeg' %}">
+	            </div>
+            </div>
+          </div>
+        </div>
+
+
+<!--OUR MISSION SECTION-->
+         <div class="jumbotron row mb-5" style="margin-top:-50px">
+                 <div class=" col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3">
+ <center><strong style="font-size:20px;">Our Mission</strong></center>
+ <h6 style="padding-left:30px;padding-top:-40px;font-size:20px;font-family:san serif"> Our Mission is to enhance the business growth of our customers
+         with creative designs and development to deliver market-defining high quality solution that create
+         value and reliable competitive advantage our client and students around the world. <P></P>
+          We aim at delivering optimal solution with quality and good services at reasonable prices for our
+         customers' satisfaction. <P></P> We are very friendly in our dealings to the customers and it helps us retain existing
+         client and expand customer cycle. We always try to improve the quality of our products by exploring innovative ideas.
+         Wholphinplus exist to help organizations fulfil their missions.</h6>
+	            </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3">
+<img class="col-md-12 col-lg-12" width="500" height="400" src="{% static 'image/images - 2021-03-29T130818.251.jpeg' %}">
+	            </div>
+            </div>
+          </div>
+        </div>
+<!--OUR VISION SECTION-->
+
+        <div class="row mb-5">
+              <div class="col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3" style="margin-top:25px;">
+ <center><strong style="font-size:20px;">Our Vision</strong></center>
+ <h6 style="padding-left:30px;padding-top:-40px;font-size:18px;font-family:san serif">Our Vision is to develop in a constant manner and grow as a major software company to become a
+                leading performer in providing quality web and software development solutions in the competitive global market
+                place.<p></p><p> We also build and secure a leading position in expanding ICT industry by providing best of breed
+            product and services to enable our partners and customers to compete effectively using the latest technology.</p>
+            We have been able to bring together a talented clue of professional shaped and models by their collective experiences
+            in the agency, corperate and private industries all of which possesses outstanding talent.</h6>
+	            </div>
+            </div>
+          </div>
+
+               <div class="col-md-6 col-lg-6">
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3">
+<img class="col-md-12 col-lg-12" width="500" height="370" src="{% static 'image/images - 2021-03-29T131336.621.jpeg' %}">
+	            </div>
+            </div>
+          </div>
+        </div>
+</div>
+       </div>
+    </div>
+{% endblock %}
+  </body>
+</html>
